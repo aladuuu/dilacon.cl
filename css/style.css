@@ -19,11 +19,17 @@
 .text-align-center {
 	text-align: center;
 }
-.mapa_google {
-	width: 100%;
-	height: 450px;
-}
-footer .map {
+footer .map_border {
     border-top: 5px solid #003a78 !important;
     border-bottom: 5px solid #003a78 !important;
+}
+.gm-map {
+    display: block;
+    width: 100%;
+    height: 300px;
+}
+a[href^="http://maps.google.com/maps"]{display:none !important}
+a[href^="https://maps.google.com/maps"]{display:none !important}
+.gmnoprint a, .gmnoprint span, .gm-style-cc {
+    display:none;
 }
