@@ -15,10 +15,6 @@ const navLinks = document.querySelector(".nav-links");
 mobileMenu.addEventListener("click", function () {
   navLinks.classList.toggle("active");
   navLinks.animate(
-    [
-      { opacity: 0, transform: "translateY(-20px)" },
-      { opacity: 1, transform: "translateY(0)" },
-    ],
     {
       duration: 300,
       easing: "ease-out",
@@ -68,22 +64,26 @@ animateOnScrollElements.forEach((element) => {
   }
 })();
 
-document.addEventListener("DOMContentLoaded", function () {
-    const sections = document.querySelectorAll("section"); // Detecta todas las secciones
-    const navLinks = document.querySelectorAll(".nav-links a"); // Detecta los enlaces del menú
+document.addEventListener('DOMContentLoaded', function() {
+  const sections = document.querySelectorAll('section');
+  const navLinks = document.querySelectorAll('.nav-links a');
 
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                navLinks.forEach(link => {
-                    link.classList.remove("active"); // Quita la clase activa de todos
-                    if (link.getAttribute("href").substring(1) === entry.target.id) {
-                        link.classList.add("active"); // Agrega la clase al enlace correspondiente
-                    }
-                });
-            }
-        });
-    }, { threshold: 0.5 }); // Se activa cuando el 50% de la sección es visible
+  window.addEventListener('scroll', function() {
+    let current = '';
 
-    sections.forEach(section => observer.observe(section)); // Observa cada sección
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop;
+      const sectionHeight = section.clientHeight;
+      if (pageYOffset >= sectionTop - sectionHeight / 3) {
+        current = section.getAttribute('id');
+      }
+    });
+
+    navLinks.forEach(link => {
+      link.classList.remove('active');
+      if (link.getAttribute('href').includes(current)) {
+        link.classList.add('active');
+      }
+    });
+  });
 });
