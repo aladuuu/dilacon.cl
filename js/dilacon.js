@@ -48,19 +48,19 @@ const observer = new IntersectionObserver(
 animateOnScrollElements.forEach((element) => {
   observer.observe(element);
 });
+
 (function () {
-  const isMobile =
-    /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-      navigator.userAgent
-    );
+  const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+    navigator.userAgent
+  );
   const hero = document.querySelector(".hero");
 
   if (isMobile) {
+    // Como muchos navegadores móviles no admiten 'fixed' de forma adecuada,
+    // se cambia a 'scroll' y se establece la posición centrada para que no se mueva.
     hero.style.backgroundAttachment = "scroll";
-    window.addEventListener("scroll", function () {
-      const scrollPos = window.pageYOffset;
-      hero.style.backgroundPositionY = -(scrollPos * 0.2) + "px";
-    });
+    hero.style.backgroundPosition = "center center";
+    // Se elimina el listener del scroll para que la imagen no se desplace.
   }
 })();
 
