@@ -442,6 +442,11 @@ input {
   font-size: 16px;
 }
 
+textarea {
+  font-size: 16px;
+  min-height: 100px;
+}
+
 .formulario-web-group input,
 .formulario-web-group textarea {
   padding: 12px;
