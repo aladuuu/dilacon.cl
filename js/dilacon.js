@@ -59,7 +59,7 @@ animateOnScrollElements.forEach((element) => {
     hero.style.backgroundAttachment = "scroll";
     window.addEventListener("scroll", function () {
       const scrollPos = window.pageYOffset;
-      hero.style.backgroundPositionY = -(scrollPos * 0.5) + "px";
+      hero.style.backgroundPositionY = -(scrollPos * 0.3) + "px";
     });
   }
 })();
