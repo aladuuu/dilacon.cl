@@ -181,6 +181,7 @@ header {
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
     url("../img/stgo.webp") no-repeat center center/cover;
   background-attachment: fixed;
+  background-color: var(--dark-bg);
   display: flex;
   align-items: center;
   text-align: center;
