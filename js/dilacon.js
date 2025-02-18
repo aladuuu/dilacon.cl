@@ -48,16 +48,19 @@ const observer = new IntersectionObserver(
 animateOnScrollElements.forEach((element) => {
   observer.observe(element);
 });
-
 (function () {
-  const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-    navigator.userAgent
-  );
+  const isMobile =
+    /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+      navigator.userAgent
+    );
   const hero = document.querySelector(".hero");
 
   if (isMobile) {
     hero.style.backgroundAttachment = "scroll";
-    hero.style.backgroundPosition = "center center";
+    window.addEventListener("scroll", function () {
+      const scrollPos = window.pageYOffset;
+      hero.style.backgroundPositionY = (scrollPos * 0.5) + "px";
+    });
   }
 })();
 
