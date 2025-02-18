@@ -32,7 +32,8 @@ document.querySelectorAll(".nav-links a").forEach((link) => {
   });
 });
 
-const animateOnScrollElements = document.querySelectorAll(".animate-on-scroll");
+const animateOnScrollElements =
+  document.querySelectorAll(".animate-on-scroll");
 
 const observer = new IntersectionObserver(
   (entries, observer) => {
@@ -68,64 +69,21 @@ animateOnScrollElements.forEach((element) => {
 })();
 
 document.addEventListener("DOMContentLoaded", function () {
-  const sections = document.querySelectorAll("section");
-  const navLinks = document.querySelectorAll(".nav-links a");
+    const sections = document.querySelectorAll("section"); // Detecta todas las secciones
+    const navLinks = document.querySelectorAll(".nav-links a"); // Detecta los enlaces del menú
 
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          navLinks.forEach((link) => {
-            link.classList.remove("active");
-            if (link.getAttribute("href").substring(1) === entry.target.id) {
-              link.classList.add("active");
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                navLinks.forEach(link => {
+                    link.classList.remove("active"); // Quita la clase activa de todos
+                    if (link.getAttribute("href").substring(1) === entry.target.id) {
+                        link.classList.add("active"); // Agrega la clase al enlace correspondiente
+                    }
+                });
             }
-          });
-        }
-      });
-    },
-    { threshold: 0.5 }
-  );
+        });
+    }, { threshold: 0.5 }); // Se activa cuando el 50% de la sección es visible
 
-  sections.forEach((section) => observer.observe(section));
-});
-
-document.getElementById("contactForm").addEventListener("submit", function (e) {
-  e.preventDefault();
-
-  const name = document.getElementById("name").value;
-  const email = document.getElementById("email").value;
-  const phone = document.getElementById("phone").value;
-  const company = document.getElementById("company").value;
-  const message = document.getElementById("message").value;
-
-  const data = {
-    api_key: "19uJKv888MMk",
-    name: name,
-    email: email,
-    phone: phone,
-    company: company,
-    message: message,
-  };
-
-  fetch("https://smtp.blackbelt.cl/dilacon.php", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(data),
-  })
-    .then((response) => response.json())
-    .then((result) => {
-      if (result.status === "success") {
-        alert("Mensaje enviado con éxito");
-        document.getElementById("contactForm").reset();
-      } else {
-        alert("Error: " + result.error);
-      }
-    })
-    .catch((error) => {
-      console.error("Error:", error);
-      alert("Error al enviar el mensaje.");
-    });
+    sections.forEach(section => observer.observe(section)); // Observa cada sección
 });
