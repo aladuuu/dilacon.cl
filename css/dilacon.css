@@ -585,6 +585,10 @@ footer {
   border-top: 1px solid #444;
 }
 
+.blackbelt {
+  color: var(--light-text);
+}
+
 @media (max-width: 1050px) {
   .about-img {
     height: 400px;
