@@ -197,7 +197,6 @@ header {
 
 .hero h1 {
   font-size: 3.5rem;
-  margin-top: -100px;
   margin-bottom: 1rem;
 }
 
@@ -599,7 +598,6 @@ footer {
   }
 }
 
-/* Responsividad */
 @media (max-width: 768px) {
   .navbar {
     padding: 15px 0;
@@ -662,5 +660,8 @@ footer {
     background: url("../img/stgo-dilacon-chico.webp") no-repeat center center/cover;
     border-radius: 8px;
     box-shadow: var(--box-shadow);
+  }
+  .hero h1 {
+    margin-top: -100px;
   }
 }
