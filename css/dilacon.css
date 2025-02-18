@@ -583,6 +583,15 @@ footer {
   border-top: 1px solid #444;
 }
 
+@media (max-width: 1050px) {
+  .about-img {
+    height: 400px;
+    background: url("../img/stgo-dilacon-medio.webp") no-repeat center center/cover;
+    border-radius: 8px;
+    box-shadow: var(--box-shadow);
+  }
+}
+
 /* Responsividad */
 @media (max-width: 768px) {
   .navbar {
@@ -640,5 +649,11 @@ footer {
 
   .timeline-item:nth-child(even) {
     left: 0;
+  }
+  .about-img {
+    height: 400px;
+    background: url("../img/stgo-dilacon-chico.webp") no-repeat center center/cover;
+    border-radius: 8px;
+    box-shadow: var(--box-shadow);
   }
 }
