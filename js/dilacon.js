@@ -56,11 +56,8 @@ animateOnScrollElements.forEach((element) => {
   const hero = document.querySelector(".hero");
 
   if (isMobile) {
-    // Como muchos navegadores móviles no admiten 'fixed' de forma adecuada,
-    // se cambia a 'scroll' y se establece la posición centrada para que no se mueva.
     hero.style.backgroundAttachment = "scroll";
     hero.style.backgroundPosition = "center center";
-    // Se elimina el listener del scroll para que la imagen no se desplace.
   }
 })();
 
