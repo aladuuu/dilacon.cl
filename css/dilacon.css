@@ -44,6 +44,7 @@ body {
   border: none;
   cursor: pointer;
   font-weight: 500;
+  text-transform: uppercase;
 }
 
 .btn:hover {
@@ -435,6 +436,10 @@ header {
 .formulario-web-group label {
   margin-bottom: 5px;
   font-weight: 500;
+}
+
+input {
+  font-size: 16px;
 }
 
 .formulario-web-group input,
