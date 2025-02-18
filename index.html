@@ -498,12 +498,13 @@
               Suscríbete para recibir novedades sobre tu sector y sus ofertas.
             </p>
             <br />
-            <form>
+            <div id="newsletter-web-message"></div>
+            <form id="newsLetter">
               <div class="formulario-web-group">
-                <input type="email" placeholder="Tu correo electrónico" />
+                <input type="email" placeholder="Tu correo electrónico" required name="email" />
               </div>
               <br />
-              <button type="submit" class="btn btn-100">Suscribirme</button>
+              <button type="submit" class="btn btn-100 newsletter-web-button">Suscribirme</button>
             </form>
           </div>
         </div>
@@ -514,5 +515,6 @@
     </footer>
     <script src="./js/dilacon.js"></script>
     <script src="./js/contacto.js"></script>
+    <script src="./js/newsletter.js"></script>
   </body>
 </html>

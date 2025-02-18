@@ -479,6 +479,20 @@ textarea {
   font-size: large;
 }
 
+.newsletter-web-success {
+  color: #0c642f;
+  margin-bottom: 40px;
+  text-align: center;
+  font-size: large;
+}
+
+.newsletter-web-error {
+  color: red;
+  margin-bottom: 40px;
+  text-align: center;
+  font-size: large;
+}
+
 .contact-info {
   background-color: var(--primary-color);
   color: var(--light-text);

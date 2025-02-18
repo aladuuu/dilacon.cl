@@ -43,7 +43,7 @@ document.getElementById('contactForm').addEventListener('submit', async function
         }
     } catch (error) {
         console.error('Error:', error);
-        messageDiv.innerHTML = `<p class="formulario-web-error">Error al enviar el formulario</p>`;
+        messageDiv.innerHTML = `<p class="formulario-web-error">Error al enviar el formulario.</p>`;
     } finally {
         submitButton.classList.remove('loading');
     }
