@@ -1,12 +1,15 @@
-window.addEventListener("load", function () {
-  const loader = document.getElementById("loader");
-  setTimeout(() => {
-    loader.style.transition = "opacity 0.5s ease";
-    loader.style.opacity = "0";
-    setTimeout(() => {
-      loader.style.display = "none";
-    }, 500);
-  }, 800);
+document.addEventListener('DOMContentLoaded', () => {
+  const loader = document.getElementById('fullscreenLoader');
+  
+  // Oculta el loader cuando la página esté lista
+  window.addEventListener('load', () => {
+      setTimeout(() => {
+          loader.classList.add('fade-out');
+          setTimeout(() => {
+              loader.remove();
+          }, 800);
+      }, 2000);
+  });
 });
 
 const mobileMenu = document.querySelector(".mobile-menu");
