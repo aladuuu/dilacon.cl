@@ -90,3 +90,17 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const cards = document.querySelectorAll(".sectores-card");
+
+  cards.forEach(function (card) {
+    card.addEventListener("click", function () {
+      const flippedCard = document.querySelector(".sectores-card.flip");
+      if (flippedCard && flippedCard !== card) {
+        flippedCard.classList.remove("flip");
+      }
+      card.classList.toggle("flip");
+    });
+  });
+});

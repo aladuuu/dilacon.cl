@@ -702,3 +702,152 @@ footer {
 .fade-out {
   opacity: 0;
 }
+
+/* Contenedor de la sección */
+#sectores-section {
+  padding: 50px 0;
+  background: var(--secondary-color);
+}
+
+.sectores-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.sectores-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+/* Grid de tarjetas */
+.sectores-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+/* Estilos para la flip card */
+.sectores-card {
+  height: 260px; /* Altura fija para el efecto flip */
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+.sectores-flip-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.sectores-flipper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.sectores-card.flip .sectores-flipper {
+  transform: rotateY(180deg);
+}
+
+.sectores-front,
+.sectores-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+  transition: background-color 0.3s, color 0.3s;
+  box-shadow: var(--box-shadow);
+}
+
+.sectores-front {
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+  z-index: 2;
+}
+
+.sectores-icon {
+  font-size: 2rem;
+  margin: auto;
+  margin-bottom: 10px;
+  color: var(--accent-color);
+}
+
+.sectores-card-header {
+  text-align: center;
+}
+
+.sectores-card-title {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+/* Cara trasera (inicialmente oculta detrás de la frontal) */
+.sectores-back {
+  background-color: var(--light-text);
+  color: var(--text-color);
+  transform: rotateY(180deg);
+}
+
+/* Cambio de colores al hacer hover o cuando está activado (flip) */
+.sectores-card:hover .sectores-front,
+.sectores-card.flip .sectores-front,
+.sectores-card:hover .sectores-back,
+.sectores-card.flip .sectores-back {
+  background-color: var(--primary-color);
+  color: var(--light-text);
+}
+
+.sectores-card:hover .sectores-icon,
+.sectores-card.flip .sectores-icon {
+  color: var(--light-text);
+}
+
+/* Lista de perfiles */
+.sectores-profiles {
+  margin-top: 20px;
+  list-style: disc inside;
+  padding: 0;
+}
+
+.sectores-profiles li {
+  margin-bottom: 5px;
+}
+
+/* Elimina la viñeta por defecto y posiciona el chevron */
+.sectores-profiles {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sectores-profiles li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 5px;
+}
+
+/* Inserta el chevron naranjo (FontAwesome: fa-chevron-right, código \f054) */
+.sectores-profiles li::before {
+  content: "\f054";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--accent-color);
+}
+
+.sectores-back p {
+  margin-bottom: 20px;
+}
