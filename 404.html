@@ -1,25 +1,154 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="title" content="Dilacon S.A | Reclutamiento Especializado">
-	<meta name="description" content="Reclutamiento Especializado en el area de la Construcción e Inmobiliaria.">
-	<meta name="keywords" content="chile, santiago, cl, stgo, Construcción, inmobiliaria, trabajo, empleo, desempleo, reclutamiento, posicionamiento">
-	<meta name="robots" content="index, follow">
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<meta name="language" content="Spanish">
-	<meta name="revisit-after" content="15 days">
-    <meta http-equiv="refresh" content="1;URL='https://dilacon.cl'" />    
-	<link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
-	<link rel="icon" href="img/favicon.png" type="image/x-icon">
-	<link rel="canonical" href="https://dilacon.cl">
-	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Julius+Sans+One%7COpen+Sans+Condensed:300,700%7COpen+Sans:400,700,600,300">
-	<link rel="stylesheet" href="css/style.css">
-	<title>Dilacon S.A | Reclutamiento Especializado</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="title" content="Dilacon S.A | Reclutamiento Especializado" />
+    <meta name="description" content="Reclutamiento Especializado en el area de la Construcción e Inmobiliaria." />
+    <meta name="keywords" content="chile, santiago, cl, stgo, Construcción, inmobiliaria, trabajo, empleo, desempleo, reclutamiento, posicionamiento" />
+    <meta name="robots" content="index, follow" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="language" content="Spanish" />
+    <meta name="revisit-after" content="15 days" />
+    <link rel="shortcut icon" href="https://dilacon.cl/img/favicon.png" type="image/x-icon" />
+    <link rel="icon" href="https://dilacon.cl/img/favicon.png" type="image/x-icon" />
+    <link rel="canonical" href="https://dilacon.cl" />
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:400,700" />
+    <title>Dilacon S.A | Reclutamiento Especializado</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: url('https://dilacon.cl/img/stgo.webp') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+
+        .card {
+            background-color: #0056b3;
+            width: 90%;
+            max-width: 500px;
+            padding: 35px 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .error-container {
+            font-size: 120px;
+            text-decoration: underline;
+            display: block;
+            line-height: 1;
+        }
+
+        .error-message {
+            font-size: 24px;
+            display: block;
+            margin-top: 15px;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 12px 30px;
+            background-color: white;
+            color: #003a78;
+            text-decoration: none;
+            font-size: 18px;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #f0f0f0;
+            transform: translateY(-2px);
+        }
+
+        .logo {
+            margin-top: 20px;
+            width: 150px;
+            height: auto;
+        }
+
+        @media (max-width: 480px) {
+            .card {
+                width: 95%;
+                padding: 25px 15px;
+            }
+
+            .error-container {
+                font-size: 90px;
+            }
+
+            .error-message {
+                font-size: 20px;
+                margin-top: 10px;
+            }
+
+            .btn {
+                margin-top: 20px;
+                padding: 10px 25px;
+            }
+
+            .logo {
+                width: 120px;
+                margin-top: 15px;
+            }
+        }
+
+        @media (orientation: landscape) and (max-height: 500px) {
+            .card {
+                padding: 20px 15px;
+            }
+
+            .error-container {
+                font-size: 70px;
+            }
+
+            .error-message {
+                margin-top: 8px;
+            }
+
+            .btn {
+                margin-top: 15px;
+                padding: 8px 20px;
+            }
+
+            .logo {
+                width: 100px;
+                margin-top: 10px;
+            }
+        }
+    </style>
 </head>
-<body style="background-color: #003a78;">
-<div align="center" style="text-align: center; padding-top: 100px;"><p style="font-size: 150px; color: white !important;">404!</p><p style="color: white !important; margin-top: -50px;">Archivo no encontrado</p></div> 
+<body>
+    <div class="container">
+        <div class="card">
+            <p>
+                <span class="error-container">404!</span>
+                <span class="error-message">Archivo no encontrado...</span>
+            </p>
+            <a href="https://dilacon.cl" class="btn">Volver</a>
+        </div>
+        <img src="https://dilacon.cl/img/logo_blanco_chico.webp" alt="DILACON Logo" class="logo">
+    </div>
 </body>
 </html>
